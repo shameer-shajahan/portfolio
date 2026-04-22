@@ -1474,15 +1474,33 @@ footer {
   section { padding: 70px 0; }
   .nav-links, .nav-social { display: none; }
   .nav-hamburger { display: flex; }
-  .hero-stats { gap: 1.5rem; }
+  
+  .hero-stats { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+  .scroll-indicator { display: none; }
+  
   .form-row { grid-template-columns: 1fr; }
   .info-grid { grid-template-columns: 1fr; }
+  
+  .about-stats-float {
+    bottom: -15px;
+    right: 5px;
+    padding: 0.8rem 1.2rem;
+  }
+  .about-stats-float .big-num { font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
   .hero-headline { font-size: 2rem; }
-  .hero-ctas { flex-direction: column; align-items: center; }
+  .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; }
   .hero-ctas .btn-primary, .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
+  
+  .profile-orb { width: 220px; height: 220px; }
+  .profile-photo-wrap { width: 170px; height: 170px; }
 }
 
 /* ============================================================
